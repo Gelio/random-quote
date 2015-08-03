@@ -1,0 +1,27 @@
+@import "mixins";
+
+#quote {
+	border: solid;
+	border-radius: 10px;
+	border-width: 10px;
+	border-color: #5c5c5c;
+	padding: 10px;
+	margin-top: 10px;
+
+	background-color: #e8e574;
+
+	@include flexDirectionAndJustify();
+
+	p {
+		font-size: 1.5em;
+		font-family: "Galamond";
+	}
+
+	h4 {
+		font-style: italic;
+	}
+}
+
+#header {
+	color: #8e9de8;
+}
