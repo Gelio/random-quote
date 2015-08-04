@@ -4,7 +4,10 @@
     <p>{{quote.content}}</p>
     <h4>{{quote.author}}</h4>
 </div>
-<a class="twitter-share-button"
-   href="https://twitter.com/intent/tweet?text={{quote.content}} --{{quote.author}}"
-   data-size="large" data-count="none">
-    Tweet</a>
+<div class="tweet-button">
+    <a ng-click="twitterShare()">
+        <button type="button" class="btn btn-info">
+            Tweet
+        </button>
+    </a>
+</div>

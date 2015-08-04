@@ -18,16 +18,19 @@
                     });
 
                 $scope.nextQuote = function () {
-                    if(quotes.length == 0) {
+                    if(quotes.length == 0)
                         quotes = pristineQuotes.slice(0);
-                        console.log("new");
-                    }
                     var random = Math.floor(Math.random()*quotes.length);
                     $scope.quote = quotes[random];
                     quotes.splice(random, 1);
                 };
+
+                $scope.twitterShare = function() {
+                    window.open("https://twitter.com/intent/tweet?text=" + $scope.quote.content + " --" + $scope.quote.author, "twitterShare", "height=300, width=600,toolbar=1,resizable=1");
+                    return false;
+                }
             },
             controllerAs: "quote"
         }
-    }])
+    }]);
 })();
